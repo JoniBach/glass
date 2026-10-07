@@ -73,6 +73,7 @@
   <h3>Task steps and progress · items prefixed <code>x&nbsp;</code> done, <code>&gt;&nbsp;</code> current</h3><div class="sg-panel" id="c-task"></div>
   <h3>Figures and meta · <code>gl-figure</code>, <code>gl-figure--display</code>, <code>gl-meta</code></h3><div class="sg-panel" id="c-fig"></div>
   <h3>Charts on a card · <code>chart: line</code> with a faint context series, <code>chart: bars</code></h3><div class="sg-panel" id="c-chart"></div>
+  <h3>Read-out · <code>readout(content)</code>, under the clock: icon words draw icons, read up close</h3><div class="sg-panel" id="c-readout"></div>
   <h3>Ticker · <code>tickerLine(item)</code>, yields first when the glass is full</h3><div class="sg-panel" id="c-ticker"></div>
   <h3>Notice · <code>notice(content)</code></h3><div class="sg-panel" id="c-notice"></div>
   <h3>Alert · <code>alert(content)</code>, normally full screen</h3><div class="sg-panel sg-alert" id="c-alert"></div>
@@ -88,7 +89,7 @@
 </div>
 
 <script type="module">
-  import { esc, card, notice, alert, tickerLine, icon, ICONS } from './js/render.mjs';
+  import { esc, card, notice, alert, tickerLine, readout, icon, ICONS } from './js/render.mjs';
   const $ = (id) => document.getElementById(id);
   const [t, schema] = await Promise.all(['tokens/tokens.resolved.json', 'schema/roles.json'].map(async (f) => (await fetch(f)).json()));
   const i = t.inputs;
@@ -125,6 +126,7 @@
   $('c-chart').innerHTML = card('info', { title: 'Mirror power down 2 W', chart: 'line', unit: 'W', labels: '14:00, 15:00', series: 'Today, Yesterday',
       data: '16.4 16.1 16.6 15.9 15.4 15.6 15.1 14.8 15.0 14.6 14.2 14.4 | 16.0 16.2 16.1 16.3 16.0 16.2 16.1 16.4 16.2 16.0 16.3 16.1' })
     + card('focus', { title: 'Bolt is cheapest', chart: 'bars', data: '3900 4500 5200', labels: 'Bolt, Acme, Crux', unit: '£' });
+  $('c-readout').innerHTML = readout({ items: ['battery 87%', 'bolt 20 W', 'up 2 W', 'plug check', 'cpu 4%', 'thermo 41°'] });
   $('c-ticker').innerHTML = `<div class="gl-ticker">${tickerLine({ source: 'Sample News', title: 'Thames clipper adds an evening service from Greenwich to Battersea' })}</div>`;
   $('c-notice').innerHTML = notice({ title: 'Report sent to the team' });
   $('c-alert').innerHTML = alert({ title: 'Leave now', body: 'Taxi is outside, 2 min away' });

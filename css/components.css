@@ -67,3 +67,10 @@ body:has(.gl-footnote) .gl-frame { padding-bottom: calc(var(--gl-gutter) / 4 + v
 .gl-bar__track { width: 100%; height: 16px; overflow: visible; }
 .gl-chart__bar { fill: var(--gl-ink-2); }
 .gl-bar__value { color: var(--gl-ink-1); font-variant-numeric: tabular-nums; }
+
+/* read-out (top-left, under the date): tiny icon-and-figure chips, read up close; decoration tier */
+/* chips wrap between, never inside, so a long read-out can't squeeze the weather column */
+.gl-readout { margin-top: calc(var(--gl-stack) / 4); font-size: var(--gl-text-label); color: var(--gl-ink-2); font-variant-numeric: tabular-nums; }
+.gl-readout__item { display: inline-flex; align-items: center; gap: 0.2em; white-space: nowrap; }
+.gl-readout__item + .gl-readout__item { margin-left: 0.7em; }
+.gl-readout__item .gl-icon { width: 1.1em; height: 1.1em; }

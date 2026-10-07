@@ -17,7 +17,7 @@ js/text.mjs             Glass text: the plain format agents write, parsed agains
 js/state.mjs            screen state and apply(): text in, new state out. Pure, so it runs anywhere (Mac, API, page)
 js/link.mjs             a whole screen state in a URL fragment: versioned, compressed, URL-safe
 js/screen.mjs           the screen page's script: decode, render, clock, expiry, ticker
-js/render.mjs           components as escaped markup, zone placement, fit policy, icons
+js/render.mjs           components as escaped markup (cards, weather, read-out, ticker, notice, alert), zone placement, fit policy, icons
 js/chart.mjs            charts on any card (chart: line | bars, data, labels, series, unit): thin marks, brightness not colour
 schema/roles.json       roles: zone, priority, lifetime, limits per field
 fixtures/               Glass text with sample data and a frozen clock, for checks, snapshots and the style guide

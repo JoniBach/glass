@@ -38,10 +38,15 @@ export const weather = (c) => `<div class="gl-weather" data-role="weather"><div 
 // Footer: one faint line pinned to the bottom edge (decoration tier), e.g. device stats while measuring.
 export const footnote = (c) => `<div class="gl-footnote" data-gl-tier="decor">${esc([c.title, c.body].filter(Boolean).join(' · '))}</div>`;
 
+// Read-out (top-left, under the clock): tiny icon-and-figure chips, decoration tier, read up close.
+// In each item, words that name an icon draw it ("battery 87%", "plug check"); the rest is text.
+export const readout = (c) => `<div class="gl-readout" data-gl-tier="decor">${(c.items || []).map((it) => `<span class="gl-readout__item">${
+  String(it).split(' ').map((w) => (ICONS[w] ? icon(w) : esc(w))).join(' ').replace(/(<\/svg>) /g, '$1')}</span>`).join('')}</div>`; // icons start each chip, so no separators
+
 export const tickerLine = (it) => `<div class="gl-ticker__src" data-gl-tier="decor">${esc(it.source)}</div><div class="gl-ticker__text">${esc(it.title)}</div>`;
 
 // Group visible layers by zone, highest priority first. Single-layer zones show only the top one; others stack.
-export const SINGLE = ['top-right', 'ticker', 'bottom', 'footer', 'full'];
+export const SINGLE = ['top-left', 'top-right', 'ticker', 'bottom', 'footer', 'full'];
 export function byZone(layers) {
   const zones = {};
   for (const [role, l] of Object.entries(layers)) (zones[l.zone] ||= []).push([role, l]);
@@ -56,6 +61,7 @@ export function byZone(layers) {
 export function renderZone(zone, entries = []) {
   if (zone === 'top-right') return entries.map(([, l]) => weather(l)).join('');
   if (zone === 'footer') return entries.map(([, l]) => footnote(l)).join('');
+  if (zone === 'top-left') return entries.map(([, l]) => readout(l)).join('');
   if (zone === 'ticker') return entries.map(([, l]) => (l.items?.length ? tickerLine({ source: l.title, title: l.items[0] }) : '')).join('');
   if (zone === 'full') return entries.map(([, l]) => alert(l)).join('');
   if (zone === 'bottom') return entries.map(([, l]) => notice(l)).join('');
@@ -84,5 +90,16 @@ export const ICONS = {
   rain: '<path d="M7 15h10a4.5 4.5 0 0 0 .4-9A6 6 0 0 0 6 7.5 3.8 3.8 0 0 0 7 15z"/><path d="M8 18l-1 3M12 18l-1 3M16 18l-1 3"/>',
   snow: '<path d="M7 15h10a4.5 4.5 0 0 0 .4-9A6 6 0 0 0 6 7.5 3.8 3.8 0 0 0 7 15z"/><path d="M8 19h.01M12 21h.01M16 19h.01M10 22h.01M14 22h.01"/>',
   storm: '<path d="M7 15h10a4.5 4.5 0 0 0 .4-9A6 6 0 0 0 6 7.5 3.8 3.8 0 0 0 7 15z"/><path d="M13 15l-3 4h4l-3 4"/>',
+  // device read-out
+  battery: '<rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 10.5v3"/>',
+  bolt: '<path d="M13 2 5 14h6l-1 8 8-12h-6z"/>',
+  plug: '<path d="M9 2v5M15 2v5M6 7h12v3a6 6 0 0 1-12 0zM12 16v6"/>',
+  cpu: '<rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
+  thermo: '<path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/>',
+  up: '<path d="M12 19V5M6 11l6-6 6 6"/>',
+  down: '<path d="M12 5v14M6 13l6 6 6-6"/>',
+  level: '<path d="M5 9h14M5 15h14"/>',
+  check: '<path d="m5 12 5 5 9-10"/>',
+  cross: '<path d="M6 6l12 12M18 6 6 18"/>',
 };
 export const icon = (name, cls = '') => `<svg class="gl-icon ${cls}" viewBox="0 0 24 24">${ICONS[name] || ICONS.cloud}</svg>`;
