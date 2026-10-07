@@ -19,7 +19,7 @@ Write updates as plain-text blocks. A block starts with `role: title`; the lines
 
 Card fields: title 6 words / 36 chars · body 132 chars · ≤ 6 items × 41 chars · progress: 0-100.
 
-weather, news and system are kept up by provider scripts: don't write them.
+weather, news, daily and system are kept up by provider scripts: don't write them.
 
 Charts on a card: `chart: line` (trend) or `chart: bars` (≤ 7 to compare), `data: 3 5 4 8` (a second,
 context series after `|`), optional `labels: Mon, Tue`, `series: Name, Other`, `unit: W`. The title still says the point.

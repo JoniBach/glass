@@ -8,6 +8,7 @@ import { build as buildGuide } from './guide.mjs';
 import { apply, empty, visible, prune } from '../js/state.mjs';
 import { encode, decode, tokenOf, linkTo } from '../js/link.mjs';
 import { spec, downsample, format, chart } from '../js/chart.mjs';
+import { tickerItems, byZone } from '../js/render.mjs';
 
 const dir = new URL('..', import.meta.url).pathname;
 const schema = JSON.parse(fs.readFileSync(dir + 'schema/roles.json', 'utf8'));
@@ -109,4 +110,11 @@ t('chart: no data, no chart', () => { assert.equal(chart({ chart: 'line' }), '')
 t('chart: long series keep their shape in 120 points', () => { const d = downsample(Array.from({ length: 1000 }, (_, i) => i)); assert.equal(d.length, 120); assert.ok(d[0] < d[119]); });
 t('chart: compact numbers and units', () => assert.deepEqual([format(1284), format(12900), format(4.2e6, '$'), format(-3.5, '%'), format(15.4, 'W')], ['1,284', '12.9K', '$4.2M', '-3.5%', '15.4 W']));
 t('chart: labels are escaped text', () => assert.ok(!chart({ chart: 'bars', data: '1', labels: '<b>x</b>' }).includes('<b>')));
+// Ticker: every ticker layer shares the reel; "Label | text" items carry their own label
+t('ticker: layers merge in priority order, items keep their labels', () => {
+  const st = apply(schema, measure, s0, 'news: BBC News\n- Headline one\n\ndaily: Today\n- Joke | Why did the dot cross the glass?\n- A plain item', T0).state;
+  assert.deepEqual(tickerItems(byZone(visible(st, T0)).ticker), [
+    { source: 'Joke', title: 'Why did the dot cross the glass?' }, { source: 'Today', title: 'A plain item' }, { source: 'BBC News', title: 'Headline one' }]);
+});
+t('ticker: a colon in a headline is not a label', () => assert.deepEqual(tickerItems([['news', { title: 'BBC', items: ['Starmer: a plan'] }]]), [{ source: 'BBC', title: 'Starmer: a plan' }]));
 console.log(`${n} passed`);

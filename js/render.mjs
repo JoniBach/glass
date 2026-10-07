@@ -43,10 +43,19 @@ export const footnote = (c) => `<div class="gl-footnote" data-gl-tier="decor">${
 export const readout = (c) => `<div class="gl-readout" data-gl-tier="decor">${(c.items || []).map((it) => `<span class="gl-readout__item">${
   String(it).split(' ').map((w) => (ICONS[w] ? icon(w) : esc(w))).join(' ').replace(/(<\/svg>) /g, '$1')}</span>`).join('')}</div>`; // icons start each chip, so no separators
 
+// Ticker items from every layer in the ticker zone, in priority order. An item written "Label | text" carries its
+// own label; otherwise the layer's title is the label.
+export function tickerItems(entries = []) {
+  return entries.flatMap(([, l]) => (l.items || []).map((it) => {
+    const m = String(it).match(/^(.{1,24}?) \| (.+)$/);
+    return m ? { source: m[1], title: m[2] } : { source: l.title, title: it };
+  }));
+}
+
 export const tickerLine = (it) => `<div class="gl-ticker__src" data-gl-tier="decor">${esc(it.source)}</div><div class="gl-ticker__text">${esc(it.title)}</div>`;
 
 // Group visible layers by zone, highest priority first. Single-layer zones show only the top one; others stack.
-export const SINGLE = ['top-left', 'top-right', 'ticker', 'bottom', 'footer', 'full'];
+export const SINGLE = ['top-left', 'top-right', 'bottom', 'footer', 'full']; // the ticker merges its layers
 export function byZone(layers) {
   const zones = {};
   for (const [role, l] of Object.entries(layers)) (zones[l.zone] ||= []).push([role, l]);
@@ -62,7 +71,7 @@ export function renderZone(zone, entries = []) {
   if (zone === 'top-right') return entries.map(([, l]) => weather(l)).join('');
   if (zone === 'footer') return entries.map(([, l]) => footnote(l)).join('');
   if (zone === 'top-left') return entries.map(([, l]) => readout(l)).join('');
-  if (zone === 'ticker') return entries.map(([, l]) => (l.items?.length ? tickerLine({ source: l.title, title: l.items[0] }) : '')).join('');
+  if (zone === 'ticker') { const first = tickerItems(entries)[0]; return first ? tickerLine(first) : ''; }
   if (zone === 'full') return entries.map(([, l]) => alert(l)).join('');
   if (zone === 'bottom') return entries.map(([, l]) => notice(l)).join('');
   return entries.map(([role, l]) => card(role, l)).join('');

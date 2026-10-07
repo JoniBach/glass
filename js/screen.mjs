@@ -3,7 +3,7 @@
 // It draws the clock itself (from state.tz) and runs expiry, `hours` windows and ticker rotation on its own timers.
 import { visible, empty, apply } from './state.mjs';
 import { decode, tokenOf } from './link.mjs';
-import { byZone, renderZone, tickerLine, fit } from './render.mjs';
+import { byZone, renderZone, tickerLine, tickerItems, fit } from './render.mjs';
 
 const $ = (id) => document.getElementById(id);
 const ZONES = ['top-left', 'top-right', 'upper', 'center', 'lower', 'bottom', 'footer', 'full'];
@@ -21,21 +21,22 @@ function clock() {
 }
 
 // ---------- ticker: one line at a time, cross-fading (§6) ----------
+// Every ticker layer's items share one reel, each with its own label; the slowest layer's rotate sets the pace.
 let tickKey = '', tickIdx = 0, tickTimer = null;
-function ticker(layer) {
-  const key = JSON.stringify(layer || null);
+function ticker(entries = []) {
+  const key = JSON.stringify(entries);
   if (key === tickKey) return;
   tickKey = key; tickIdx = 0; clearInterval(tickTimer);
-  const items = layer?.items || [];
+  const items = tickerItems(entries);
   const show = () => {
-    const put = () => { $('ticker').innerHTML = items.length ? tickerLine({ source: layer.title, title: items[tickIdx++ % items.length] }) : ''; layout(); };
+    const put = () => { $('ticker').innerHTML = items.length ? tickerLine(items[tickIdx++ % items.length]) : ''; layout(); };
     const text = $('ticker').querySelector('.gl-ticker__text');
     if (!text) return put();
     text.classList.add('is-out');
     setTimeout(put, 800);
   };
   show();
-  const secs = Math.max(8, Number(layer?.rotate) || 12); // --gl-rotate-min
+  const secs = Math.max(8, ...entries.map(([, l]) => Number(l.rotate) || 12)); // --gl-rotate-min
   if (items.length > 1) tickTimer = setInterval(show, secs * 1000);
 }
 
@@ -51,7 +52,7 @@ function render() {
     if (shown[z] !== html) { $(z).innerHTML = html; shown[z] = html; } // unchanged zones keep their elements: no replayed fade-ins
   }
   $('full').classList.toggle('is-on', !!zones.full);
-  ticker(zones.ticker?.[0]?.[1]);
+  ticker(zones.ticker);
   const dim = state?.display?.dim;
   $('dim').style.opacity = dim && (!dim.until || dim.until > now()) ? String(1 - Math.max(2, dim.level) / 100) : '0';
   $('status').hidden = !problem;
