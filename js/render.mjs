@@ -33,7 +33,13 @@ export const alert = (c) => `<div data-role="alert"><h2 class="gl-alert__title" 
 export const weather = (c) => `<div class="gl-weather" data-role="weather"><div class="gl-weather__now">${c.icon ? icon(c.icon) : ''}`
   + `<div class="gl-figure" data-gl-tier="room">${esc(c.title)}</div></div>`
   + (c.body ? `<div class="gl-meta gl-weather__line">${esc(c.body)}</div>` : '')
-  + (c.items?.length ? `<div class="gl-meta gl-weather__days">${c.items.map((i) => `<div>${esc(i)}</div>`).join('')}</div>` : '') + '</div>';
+  + (c.items?.length ? `<div class="gl-meta gl-weather__days">${c.items.map((i) => `<div>${leadIcon(i)}</div>`).join('')}</div>` : '') + '</div>';
+
+// An item whose first word names an icon starts with that icon ("moon-wax-cres Tonight: waxing crescent").
+function leadIcon(text) {
+  const [w, ...rest] = String(text).split(' ');
+  return ICONS[w] ? `<span class="gl-lead">${icon(w)}${esc(rest.join(' '))}</span>` : esc(text);
+}
 
 // Footer: one faint line pinned to the bottom edge (decoration tier), e.g. device stats while measuring.
 export const footnote = (c) => `<div class="gl-footnote" data-gl-tier="decor">${esc([c.title, c.body].filter(Boolean).join(' · '))}</div>`;
@@ -110,5 +116,15 @@ export const ICONS = {
   level: '<path d="M5 9h14M5 15h14"/>',
   check: '<path d="m5 12 5 5 9-10"/>',
   cross: '<path d="M6 6l12 12M18 6 6 18"/>',
+  // moon phases by eighth of the month, 0 new → 4 full → 7 waning crescent: the outline of the lit part (stroke
+  // only, §1); a dotted rim for the new moon. Short names, because icon words count towards line limits.
+  'moon-0': '<circle cx="12" cy="12" r="8" stroke-dasharray="1.5 2.6"/>',
+  'moon-1': '<path d="M12 4a8 8 0 0 1 0 16a4 8 0 0 0 0-16z"/>',
+  'moon-2': '<path d="M12 4a8 8 0 0 1 0 16z"/>',
+  'moon-3': '<path d="M12 4a8 8 0 0 1 0 16a4 8 0 0 1 0-16z"/>',
+  'moon-4': '<circle cx="12" cy="12" r="8"/>',
+  'moon-5': '<path d="M12 4a8 8 0 0 0 0 16a4 8 0 0 0 0-16z"/>',
+  'moon-6': '<path d="M12 4a8 8 0 0 0 0 16z"/>',
+  'moon-7': '<path d="M12 4a8 8 0 0 0 0 16a4 8 0 0 1 0-16z"/>',
 };
 export const icon = (name, cls = '') => `<svg class="gl-icon ${cls}" viewBox="0 0 24 24">${ICONS[name] || ICONS.cloud}</svg>`;

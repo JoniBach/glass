@@ -75,3 +75,7 @@ body:has(.gl-footnote) .gl-frame { padding-bottom: calc(var(--gl-gutter) / 4 + v
 .gl-readout__item { display: inline-flex; align-items: center; gap: 0.2em; white-space: nowrap; }
 .gl-readout__item + .gl-readout__item { margin-left: 0.7em; }
 .gl-readout__item .gl-icon { width: 1.1em; height: 1.1em; }
+
+/* an item led by an icon (e.g. tonight's moon in the weather): the icon at text height */
+.gl-lead { display: inline-flex; align-items: center; gap: 0.3em; white-space: nowrap; }
+.gl-lead .gl-icon { width: 1.05em; height: 1.05em; }

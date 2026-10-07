@@ -5,5 +5,5 @@
  "display": {
   "clock24h": true
  },
- "text": "weather: 14°\nicon: partly\nPartly cloudy · London\n- 16° / 9° · 20% rain\n- Thu 15° · Fri 18° · Sat 15°\n\nnews: Sample News\n- Thames clipper adds an evening service from Greenwich to Battersea\n- Autumn leaf-fall timetable starts on Southeastern routes\nrotate: 60"
+ "text": "weather: 14°\nicon: partly\nPartly cloudy · London\n- 16° / 9° · 20% rain\n- Thu 15° · Fri 18° · Sat 15°\n- moon-3 Waxing gibbous tonight\n\nnews: Sample News\n- Thames clipper adds an evening service from Greenwich to Battersea\n- Autumn leaf-fall timetable starts on Southeastern routes\nrotate: 60"
 }
