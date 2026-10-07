@@ -23,7 +23,8 @@
 .gl-progress > div { height: 100%; background: var(--gl-ink-1); transition: width 1s; }
 
 /* ticker: one ambient line at a time, cross-fading; yields first when the glass is full */
-.gl-ticker { min-height: 100px; }
+/* the reel reserves its tallest item (label + 3 lines), so rotating items never shift the cards above it (§6) */
+.gl-ticker { min-height: calc(var(--gl-text-label) * 1.6 + var(--gl-text-body) * var(--gl-line) * 3); }
 .gl-ticker__text { font-size: var(--gl-text-body); line-height: var(--gl-line); color: var(--gl-ink-2); transition: opacity var(--gl-fade); }
 .gl-ticker__text.is-out { opacity: 0; }
 
