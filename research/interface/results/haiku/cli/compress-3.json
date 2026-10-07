@@ -1,0 +1,8 @@
+{
+  "raw": "mirror show info --title \"Mirror Research Findings\" --body \"Guidelines for smart mirror display. Read from across a room in a glance.\" --item \"Text subtends 0.3° minimum for legibility\" --item \"Keep glass centre clear for reflection\" --item \"High contrast white text works best\" --item \"Glance under 2 seconds\" --item \"Animate only on change, motion draws eye\" --item \"Alerts rare to stay effective\"",
+  "isError": false,
+  "ms": 27244,
+  "cost": 0.018828,
+  "tokensIn": 1018,
+  "tokensOut": 3562
+}

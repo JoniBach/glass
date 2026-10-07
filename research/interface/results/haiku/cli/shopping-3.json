@@ -1,0 +1,8 @@
+{
+  "raw": "```\nmirror show focus --title \"Shopping list\" --item \"milk\" --item \"eggs\" --item \"bread\" --item \"coffee\" --item \"bin bags\" --item \"lemons\" --item \"rice\" --item \"tinned tomatoes\"\n```",
+  "isError": false,
+  "ms": 28493,
+  "cost": 0.015047,
+  "tokensIn": 917,
+  "tokensOut": 2826
+}

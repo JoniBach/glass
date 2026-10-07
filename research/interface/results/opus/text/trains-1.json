@@ -1,0 +1,8 @@
+{
+  "raw": "info: Next train 07:42, platform 3\n07:42 platform 3\n08:05 platform 1\n08:31 cancelled",
+  "isError": false,
+  "ms": 3762,
+  "cost": 0.011712,
+  "tokensIn": 1045,
+  "tokensOut": 168
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "clear: task\n\nnotify: Report finished sending to Sarah's team",
+  "isError": false,
+  "ms": 5163,
+  "cost": 0.002833,
+  "tokensIn": 863,
+  "tokensOut": 394
+}

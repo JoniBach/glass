@@ -1,0 +1,8 @@
+{
+  "raw": "<focus title=\"Shopping list\"><body></body><item>milk</item><item>eggs</item><item>bread</item><item>coffee</item><item>bin bags</item><item>lemons</item><item>rice</item><item>tinned tomatoes</item></focus>",
+  "isError": false,
+  "ms": 20248,
+  "cost": 0.010846000000000001,
+  "tokensIn": 906,
+  "tokensOut": 1988
+}

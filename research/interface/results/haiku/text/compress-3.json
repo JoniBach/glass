@@ -1,0 +1,8 @@
+{
+  "raw": "info: Smart mirror research main findings\n6 key principles for readable, usable smart mirror design. Apply these rules for displays viewable from across the room.\n- Text minimum 0.3 degree subtend\n- Keep centre clear, reflection usable\n- Pure black invisible, grey areas glow\n- A glance should take under 2 seconds\n- Cards should work from title alone\n- Alerts should be rare to stay effective",
+  "isError": false,
+  "ms": 77658,
+  "cost": 0.0463,
+  "tokensIn": 975,
+  "tokensOut": 9065
+}

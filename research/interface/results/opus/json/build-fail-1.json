@@ -1,0 +1,8 @@
+{
+  "raw": "[{\"role\":\"info\",\"title\":\"Build failed: 1 error, 3 warnings\",\"body\":\"Take a look when you can, not urgent\",\"items\":[\"Error in src/app.ts line 42\",\"Cannot find module \\\"<glass>/render\\\"\",\"Plus 3 warnings\"]}]",
+  "isError": false,
+  "ms": 6446,
+  "cost": 0.013988,
+  "tokensIn": 1082,
+  "tokensOut": 267
+}

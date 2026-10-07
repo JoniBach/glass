@@ -1,0 +1,8 @@
+{
+  "raw": "task: Booking dentist\nTue 14:30, confirming by email\nx Finding slots\nx Choosing Tue 14:30\n> Confirming by email\nprogress: 75",
+  "isError": false,
+  "ms": 6285,
+  "cost": 0.003461,
+  "tokensIn": 886,
+  "tokensOut": 515
+}

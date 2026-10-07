@@ -1,0 +1,8 @@
+{
+  "raw": "```\nmirror show info --title \"Build failed src/app.ts line 42\" --body \"Cannot find module <glass>/render & 3 warnings\" --item \"Error at src/app.ts line 42\" --item \"Cannot find module <glass>/render\" --item \"3 warnings detected\"\n```",
+  "isError": false,
+  "ms": 20315,
+  "cost": 0.011545000000000001,
+  "tokensIn": 935,
+  "tokensOut": 2122
+}

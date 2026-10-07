@@ -1,0 +1,8 @@
+{
+  "raw": "mirror show focus --title \"12 days to Grand Tour\" --body \"Launch 19 Oct 2026\"",
+  "isError": false,
+  "ms": 7488,
+  "cost": 0.0039970000000000006,
+  "tokensIn": 912,
+  "tokensOut": 617
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "mirror show info --title \"Build failed: missing module\" --body $'src/app.ts line 42\\nCannot find module \"<glass>/render\"\\n3 warnings'",
+  "isError": false,
+  "ms": 29332,
+  "cost": 0.01554,
+  "tokensIn": 935,
+  "tokensOut": 2921
+}

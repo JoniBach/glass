@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"alert\",\"title\":\"Taxi is here now\",\"body\":\"Black Toyota AB12 CDE waiting outside\"}]\n```",
+  "isError": false,
+  "ms": 5499,
+  "cost": 0.002993,
+  "tokensIn": 888,
+  "tokensOut": 421
+}

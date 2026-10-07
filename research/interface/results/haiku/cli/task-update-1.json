@@ -1,0 +1,8 @@
+{
+  "raw": "```\nmirror task \"Booking dentist\" --item \"x Finding slots\" --item \"x Choosing Tue 14:30\" --item \"> Confirming by email\" --progress 75\n```",
+  "isError": false,
+  "ms": 4817,
+  "cost": 0.0029040000000000003,
+  "tokensIn": 929,
+  "tokensOut": 395
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "<focus title=\"Pancake recipe\"><body>200g flour, 2 eggs, 300ml milk, pinch salt. Butter for frying. Rest batter 30 mins.</body><item>200g flour</item><item>2 eggs</item><item>300ml milk</item><item>Pinch of salt</item><item>Butter for frying</item><item>Rest batter 30 mins</item></focus>",
+  "isError": false,
+  "ms": 11297,
+  "cost": 0.006417,
+  "tokensIn": 927,
+  "tokensOut": 1098
+}

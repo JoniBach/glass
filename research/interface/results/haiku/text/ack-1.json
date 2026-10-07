@@ -1,0 +1,8 @@
+{
+  "raw": "clear: alert",
+  "isError": false,
+  "ms": 2163,
+  "cost": 0.001291,
+  "tokensIn": 861,
+  "tokensOut": 86
+}

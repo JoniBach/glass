@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"info\",\"title\":\"Build failed src/app.ts:42\",\"body\":\"Cannot find module \\\"<glass>/render\\\"\\n3 warnings also present\\nNeeds review\",\"items\":[\"Missing module render\",\"Line 42 error\",\"3 build warnings\"]}]\n```",
+  "isError": false,
+  "ms": 20727,
+  "cost": 0.011199,
+  "tokensIn": 909,
+  "tokensOut": 2058
+}

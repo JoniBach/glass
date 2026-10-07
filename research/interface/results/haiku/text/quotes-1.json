@@ -1,0 +1,8 @@
+{
+  "raw": "info: Builder quotes\nCheapest: Bolt $3,900. Fastest: Crux, 4 weeks.\n- Bolt $3,900 (9 weeks)\n- Acme $4,500 (6 weeks)\n- Crux $5,200 (4 weeks)",
+  "isError": false,
+  "ms": 10489,
+  "cost": 0.005873000000000001,
+  "tokensIn": 903,
+  "tokensOut": 994
+}

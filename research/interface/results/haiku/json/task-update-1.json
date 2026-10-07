@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"task\",\"title\":\"Booking dentist\",\"body\":\"Slots found. Appointment Tue 14:30. Sending confirmation email.\",\"items\":[\"x Finding slots\",\"x Choose Tue 14:30\",\"> Confirm by email\"],\"progress\":75}]\n```",
+  "isError": false,
+  "ms": 8370,
+  "cost": 0.004823,
+  "tokensIn": 903,
+  "tokensOut": 784
+}

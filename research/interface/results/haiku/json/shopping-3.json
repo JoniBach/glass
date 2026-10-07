@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"focus\",\"title\":\"Shopping list\",\"items\":[\"milk\",\"eggs\",\"bread\",\"coffee\",\"bin bags\",\"lemons\",\"rice\",\"tinned tomatoes\"]}]\n```",
+  "isError": false,
+  "ms": 22739,
+  "cost": 0.011926,
+  "tokensIn": 891,
+  "tokensOut": 2207
+}

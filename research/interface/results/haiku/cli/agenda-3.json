@@ -1,0 +1,8 @@
+{
+  "raw": "```\nmirror show agenda --title \"Today's agenda\" --item \"09:30 Standup\" --item \"11:00 Dentist with Dr O'Neil\" --item \"13:00 Lunch with Priya\" --item \"16:00 Q3 review with finance\"\n```",
+  "isError": false,
+  "ms": 8210,
+  "cost": 0.004768,
+  "tokensIn": 943,
+  "tokensOut": 765
+}

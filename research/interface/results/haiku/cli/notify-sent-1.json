@@ -1,0 +1,8 @@
+{
+  "raw": "mirror notify \"Report sent to Sarah's team\"",
+  "isError": false,
+  "ms": 4221,
+  "cost": 0.002331,
+  "tokensIn": 906,
+  "tokensOut": 285
+}

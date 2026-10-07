@@ -1,0 +1,8 @@
+{
+  "raw": "```bash\nmirror show focus --title \"Shopping: 8 things to buy\" --item \"Milk and eggs\" --item \"Bread and rice\" --item \"Coffee\" --item \"Lemons\" --item \"Tinned tomatoes\" --item \"Bin bags\"\n```",
+  "isError": false,
+  "ms": 5762,
+  "cost": 0.016568,
+  "tokensIn": 1097,
+  "tokensOut": 390
+}

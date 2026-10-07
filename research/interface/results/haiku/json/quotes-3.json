@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"info\",\"title\":\"Bolt cheapest $3,900\",\"body\":\"9 weeks delivery. Crux fastest 4 weeks but $1,300 more. Acme $4,500.\",\"items\":[\"Bolt $3,900 9 weeks\",\"Acme $4,500 6 weeks\",\"Crux $5,200 4 weeks\"]}]\n```",
+  "isError": false,
+  "ms": 23462,
+  "cost": 0.01333,
+  "tokensIn": 920,
+  "tokensOut": 2482
+}

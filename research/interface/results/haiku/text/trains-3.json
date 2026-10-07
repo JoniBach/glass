@@ -1,0 +1,8 @@
+{
+  "raw": "info: Train times\n07:42 from platform 3\n08:05 from platform 1\n08:31 cancelled",
+  "isError": false,
+  "ms": 8662,
+  "cost": 0.0052840000000000005,
+  "tokensIn": 884,
+  "tokensOut": 880
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "```bash\nmirror show info --title \"Bolt cheapest at \\$3,900\" --body \"Saves \\$600 on Acme but takes 3 weeks longer. Crux is fastest at 4 weeks but costs most.\" --item \"Bolt \\$3,900, 9 weeks\" --item \"Acme \\$4,500, 6 weeks\" --item \"Crux \\$5,200, 4 weeks\"\n```",
+  "isError": false,
+  "ms": 7000,
+  "cost": 0.01498,
+  "tokensIn": 1126,
+  "tokensOut": 299
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "[{\"role\":\"focus\",\"title\":\"Pancake recipe\",\"body\":\"Mix flour, eggs, milk and salt together.\\nRest batter 30 minutes before frying.\\nFry in butter until golden brown.\",\"items\":[\"200g flour\",\"2 eggs\",\"300ml milk\",\"Pinch of salt\",\"Butter for frying\",\"Rest 30 mins before cooking\"]}]",
+  "isError": false,
+  "ms": 17690,
+  "cost": 0.010182,
+  "tokensIn": 912,
+  "tokensOut": 1854
+}

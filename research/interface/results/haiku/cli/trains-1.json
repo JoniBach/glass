@@ -1,0 +1,8 @@
+{
+  "raw": "```\nmirror show info --title \"Train times\" --item \"07:42 from platform 3\" --item \"08:05 from platform 1\" --item \"08:31 cancelled\"\n```",
+  "isError": false,
+  "ms": 4865,
+  "cost": 0.003047,
+  "tokensIn": 927,
+  "tokensOut": 424
+}

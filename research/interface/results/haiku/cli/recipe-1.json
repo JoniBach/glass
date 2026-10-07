@@ -1,0 +1,8 @@
+{
+  "raw": "```\nmirror show focus --title \"Pancake recipe\" --item \"200g flour\" --item \"2 eggs\" --item \"300ml milk\" --item \"Pinch of salt\" --item \"Butter for frying\" --item \"Rest batter 30 mins\"\n```",
+  "isError": false,
+  "ms": 6782,
+  "cost": 0.004003,
+  "tokensIn": 938,
+  "tokensOut": 613
+}

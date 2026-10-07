@@ -1,0 +1,8 @@
+{
+  "raw": "alert: Taxi outside now\nBlack Toyota AB12 CDE",
+  "isError": false,
+  "ms": 6234,
+  "cost": 0.002856,
+  "tokensIn": 871,
+  "tokensOut": 397
+}

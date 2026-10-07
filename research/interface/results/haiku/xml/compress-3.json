@@ -1,0 +1,8 @@
+{
+  "raw": "<info title=\"Mirror research main findings\"><body>Design principles for smart mirror displays behind two-way glass, read from across rooms.</body>\n<item>Text minimum 0.3° subtend for legibility</item>\n<item>Keep centre clear for reflection visible</item>\n<item>Black invisible: white text high contrast</item>\n<item>Glance must complete in under 2 seconds</item>\n<item>Animate only on change, motion draws eye</item>\n<item>Cards work best from title alone for scan</item>\n</info>",
+  "isError": false,
+  "ms": 95828,
+  "cost": 0.05285700000000001,
+  "tokensIn": 1007,
+  "tokensOut": 10370
+}

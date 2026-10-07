@@ -1,0 +1,8 @@
+{
+  "raw": "```\nmirror task \"Migrate blog to Astro\" --body \"Converting post templates to Astro format\" --item \"x Audit posts\" --item \"> Convert templates\" --item \"Fix image paths\" --item \"Deploy\" --progress 35\n```",
+  "isError": false,
+  "ms": 7965,
+  "cost": 0.004595999999999999,
+  "tokensIn": 941,
+  "tokensOut": 731
+}

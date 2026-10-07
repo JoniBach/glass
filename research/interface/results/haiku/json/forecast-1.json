@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"info\",\"title\":\"3-day forecast\",\"items\":[\"14° Thursday rain\",\"17° Friday cloud\",\"19° Saturday sun\"]}]\n```",
+  "isError": false,
+  "ms": 7219,
+  "cost": 0.003972,
+  "tokensIn": 892,
+  "tokensOut": 616
+}

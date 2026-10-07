@@ -1,0 +1,8 @@
+{
+  "raw": "```bash\nmirror show focus --title \"12 days until Grand Tour\" --body \"Launches 19 October 2026\"\n```",
+  "isError": false,
+  "ms": 8247,
+  "cost": 0.004542,
+  "tokensIn": 912,
+  "tokensOut": 726
+}

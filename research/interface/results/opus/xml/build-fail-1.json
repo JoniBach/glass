@@ -1,0 +1,8 @@
+{
+  "raw": "<info title=\"Build failed at src/app.ts:42\"><body>Not urgent, but please take a look when you can.</body><item>Cannot find module &quot;&lt;glass&gt;/render&quot;</item><item>3 warnings</item></info>",
+  "isError": false,
+  "ms": 5450,
+  "cost": 0.0121708,
+  "tokensIn": 1101,
+  "tokensOut": 369
+}

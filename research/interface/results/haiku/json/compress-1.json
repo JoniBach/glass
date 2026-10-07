@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"info\",\"title\":\"Mirror research findings\",\"body\":\"Text at 0.3° for legibility. Keep centre clear for reflection. White text, high contrast. Animate on change, glance in 2 seconds.\",\"items\":[\"0.3° minimum angle for text legibility\",\"Keep centre clear to preserve reflection\",\"White text best, black invisible\",\"Title alone tells the story in glance\",\"Animate only on state change\",\"Alerts should be rare to work\"]}]\n```",
+  "isError": false,
+  "ms": 41292,
+  "cost": 0.024662000000000003,
+  "tokensIn": 992,
+  "tokensOut": 4734
+}

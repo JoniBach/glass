@@ -1,0 +1,9 @@
+{
+ "_doc": "Screen fixture: Glass text applied at a frozen time. Rendered by screen.html?fixture=rest",
+ "now": "2026-10-07T07:30:00+01:00",
+ "tz": "Europe/London",
+ "display": {
+  "clock24h": true
+ },
+ "text": "weather: 14°\nicon: partly\nPartly cloudy · London\n- 16° / 9° · 20% rain\n- Thu 15° · Fri 18° · Sat 15°\n\nnews: Sample News\n- Thames clipper adds an evening service from Greenwich to Battersea\n- Autumn leaf-fall timetable starts on Southeastern routes\nrotate: 60"
+}

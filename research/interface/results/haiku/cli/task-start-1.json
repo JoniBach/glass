@@ -1,0 +1,8 @@
+{
+  "raw": "```bash\nmirror task \"Migrate blog to Astro\" --item \"x Audit posts\" --item \"> Convert templates\" --item \"Fix image paths\" --item \"Deploy\" --progress 30\n```",
+  "isError": false,
+  "ms": 6997,
+  "cost": 0.0039109999999999995,
+  "tokensIn": 941,
+  "tokensOut": 594
+}

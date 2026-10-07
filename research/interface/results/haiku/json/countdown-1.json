@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"focus\",\"title\":\"12 days until Grand Tour\",\"body\":\"Launches Friday 19 October\"}]\n```",
+  "isError": false,
+  "ms": 11619,
+  "cost": 0.005991,
+  "tokensIn": 886,
+  "tokensOut": 1021
+}

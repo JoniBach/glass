@@ -1,0 +1,8 @@
+{
+  "raw": "mirror show info --title \"Train times\" --item \"07:42 platform 3\" --item \"08:05 platform 1\" --item \"08:31 cancelled\"",
+  "isError": false,
+  "ms": 3969,
+  "cost": 0.0025470000000000002,
+  "tokensIn": 927,
+  "tokensOut": 324
+}

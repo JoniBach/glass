@@ -1,0 +1,8 @@
+{
+  "raw": "focus: 8 things to buy\n- Milk and eggs\n- Bread\n- Coffee\n- Lemons\n- Rice and tinned tomatoes\n- Bin bags",
+  "isError": false,
+  "ms": 5432,
+  "cost": 0.014972000000000003,
+  "tokensIn": 1045,
+  "tokensOut": 331
+}

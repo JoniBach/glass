@@ -1,0 +1,8 @@
+{
+  "raw": "<info title=\"Next train 07:42, platform 3\"><item>07:42 platform 3</item><item>08:05 platform 1</item><item>08:31 cancelled</item></info>",
+  "isError": false,
+  "ms": 3352,
+  "cost": 0.010732,
+  "tokensIn": 1085,
+  "tokensOut": 103
+}

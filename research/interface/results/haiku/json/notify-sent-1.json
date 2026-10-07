@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"notify\",\"title\":\"Report sent to Sarah's team\"}]\n```",
+  "isError": false,
+  "ms": 5435,
+  "cost": 0.0030900000000000003,
+  "tokensIn": 880,
+  "tokensOut": 442
+}

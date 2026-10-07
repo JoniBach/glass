@@ -1,0 +1,8 @@
+{
+  "raw": "```\nmirror show info --title \"Mirror research findings\" --body \"Key principles for smart mirror display effectiveness and usability\" --item \"Text 0.3° minimum, white contrast\" --item \"Keep centre clear for reflection\" --item \"Pure black invisible, grey glows\" --item \"Glance under 2 seconds\" --item \"Animate only on change\" --item \"Cards work from title, alerts rare\"\n```",
+  "isError": false,
+  "ms": 58683,
+  "cost": 0.035778,
+  "tokensIn": 1018,
+  "tokensOut": 6952
+}

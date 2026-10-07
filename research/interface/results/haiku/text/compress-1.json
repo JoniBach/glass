@@ -1,0 +1,8 @@
+{
+  "raw": "info: Mirror Research Main Findings\nDesign principles for smart mirror use\n- 0.3° text angle minimum for readability\n- Keep glass centre clear for reflection\n- Pure black invisible, grey areas glow\n- Glance comprehension under 2 seconds\n- High contrast white text works best\n- Alerts rare to maintain effectiveness",
+  "isError": false,
+  "ms": 67883,
+  "cost": 0.03735,
+  "tokensIn": 975,
+  "tokensOut": 7275
+}

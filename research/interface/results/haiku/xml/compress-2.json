@@ -1,0 +1,8 @@
+{
+  "raw": "<info title=\"Mirror research findings\"><body>Display principles optimized for smart mirror viewing across a room. Maximize legibility and impact, minimize cognitive load.</body><item>0.3° text angle, under 2 sec glances</item><item>Keep centre clear so reflection works</item><item>Black invisible, grey areas glow</item><item>Motion draws eye, animate on change</item><item>High contrast white text works best</item><item>Cards from title alone, alerts stay rare</item></info>",
+  "isError": false,
+  "ms": 45807,
+  "cost": 0.026752,
+  "tokensIn": 1007,
+  "tokensOut": 5149
+}

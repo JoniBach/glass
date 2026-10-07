@@ -1,0 +1,8 @@
+{
+  "raw": "[{\"role\":\"agenda\",\"title\":\"Today's agenda\",\"items\":[\"09:30 standup\",\"11:00 dentist (Dr O'Neil)\",\"13:00 lunch with Priya\",\"16:00 Q3 review with finance\"]}]",
+  "isError": false,
+  "ms": 8853,
+  "cost": 0.005087,
+  "tokensIn": 917,
+  "tokensOut": 834
+}

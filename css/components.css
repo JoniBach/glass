@@ -1,0 +1,47 @@
+/* Glass components. No boxes or fills (§1): structure is type, spacing and hairlines. */
+
+/* figures: room-tier numbers (clock, temperature) */
+.gl-figure { font-weight: var(--gl-weight-room); font-size: var(--gl-text-room); line-height: 1; font-variant-numeric: tabular-nums; }
+.gl-figure--display { font-size: var(--gl-text-display); font-weight: var(--gl-weight-display); letter-spacing: -0.03em; line-height: 0.9; }
+.gl-meta { font-size: var(--gl-text-meta); color: var(--gl-ink-2); }
+.gl-icon { fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+
+/* card: label (decor), title, body, list, progress */
+.gl-card { border-left: 2px solid var(--gl-ink-3); padding-left: calc(var(--gl-card-indent) - 2px); animation: gl-in var(--gl-enter) ease-out; }
+.gl-card__label, .gl-ticker__src { font-size: var(--gl-text-label); font-weight: var(--gl-weight-label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gl-ink-3); margin-bottom: 8px; }
+.gl-card__title { font-size: var(--gl-text-title); font-weight: var(--gl-weight-title); line-height: 1.15; }
+.gl-card__body { font-size: var(--gl-text-body); color: var(--gl-ink-2); line-height: var(--gl-line); margin-top: 8px; }
+
+.gl-list { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.gl-item { font-size: var(--gl-text-body); line-height: var(--gl-line); display: grid; grid-template-columns: var(--gl-marker) 1fr; }
+.gl-item::before { content: "—"; color: var(--gl-ink-3); }
+.gl-item.is-done { color: var(--gl-ink-2); text-decoration: line-through; text-decoration-color: var(--gl-ink-3); }
+.gl-item.is-now { font-weight: 600; }
+.gl-item.is-now::before { content: "›"; color: var(--gl-ink-1); }
+
+.gl-progress { margin-top: 16px; height: 3px; background: var(--gl-rule); }
+.gl-progress > div { height: 100%; background: var(--gl-ink-1); transition: width 1s; }
+
+/* ticker: one ambient line at a time, cross-fading; yields first when the glass is full */
+.gl-ticker { min-height: 100px; }
+.gl-ticker__text { font-size: var(--gl-text-body); line-height: var(--gl-line); color: var(--gl-ink-2); transition: opacity var(--gl-fade); }
+.gl-ticker__text.is-out { opacity: 0; }
+
+/* notice: one centred line at the bottom */
+.gl-notice { text-align: center; font-size: var(--gl-text-title); font-weight: 400; animation: gl-in var(--gl-enter) ease-out; }
+
+/* alert: full screen, the only place the accent is used (§6) */
+.gl-alert__title { font-size: var(--gl-text-room); font-weight: 600; line-height: 1.05; color: var(--gl-accent); }
+.gl-alert__body { font-size: var(--gl-text-title); margin-top: 24px; }
+
+.gl-status { position: fixed; bottom: 16px; left: 0; right: 0; text-align: center; color: var(--gl-ink-3); font-size: var(--gl-text-label); }
+
+/* weather (top-right): the temperature with its icon, then conditions and a short forecast, right-aligned */
+.gl-weather { text-align: right; }
+.gl-weather__now { display: flex; align-items: center; justify-content: flex-end; gap: calc(var(--gl-gutter) / 2); }
+.gl-weather__now .gl-icon { width: calc(var(--gl-text-room) * 0.8); height: calc(var(--gl-text-room) * 0.8); }
+.gl-weather__line, .gl-weather__days { margin-top: calc(var(--gl-stack) / 4); }
+.gl-weather__days { font-variant-numeric: tabular-nums; }
+
+/* clock (top-left): drawn by the screen itself, from the state's time zone */
+.gl-clock__date { margin-top: calc(var(--gl-stack) / 4); }

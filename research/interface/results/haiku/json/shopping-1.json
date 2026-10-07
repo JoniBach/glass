@@ -1,0 +1,8 @@
+{
+  "raw": "[{\n  \"role\": \"focus\",\n  \"title\": \"Shopping list\",\n  \"body\": \"Also need: rice, tinned tomatoes\",\n  \"items\": [\"milk\", \"eggs\", \"bread\", \"coffee\", \"bin bags\", \"lemons\"]\n}]",
+  "isError": false,
+  "ms": 32952,
+  "cost": 0.018136,
+  "tokensIn": 891,
+  "tokensOut": 3449
+}

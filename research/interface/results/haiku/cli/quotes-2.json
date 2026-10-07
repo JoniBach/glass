@@ -1,0 +1,8 @@
+{
+  "raw": "```\nmirror show info --title \"Cheapest quote: Bolt $3,900\" --body \"Bolt takes 9 weeks. Crux fastest at 4 weeks.\" --item \"Acme $4,500 in 6 weeks\" --item \"Bolt $3,900 in 9 weeks\" --item \"Crux $5,200 in 4 weeks\"\n```",
+  "isError": false,
+  "ms": 11726,
+  "cost": 0.006896,
+  "tokensIn": 946,
+  "tokensOut": 1190
+}

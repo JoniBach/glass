@@ -1,0 +1,8 @@
+{
+  "raw": "focus: Shopping list\n- milk\n- eggs\n- bread\n- coffee\n- bin bags\n- lemons\n- rice\n- tinned tomatoes",
+  "isError": false,
+  "ms": 21788,
+  "cost": 0.011113999999999999,
+  "tokensIn": 874,
+  "tokensOut": 2048
+}

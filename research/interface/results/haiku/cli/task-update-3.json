@@ -1,0 +1,8 @@
+{
+  "raw": "```bash\nmirror task \"Booking dentist\" --item \"x Finding slots\" --item \"x Chose Tue 14:30\" --item \"> Confirming by email\" --progress 75\n```",
+  "isError": false,
+  "ms": 4943,
+  "cost": 0.003014,
+  "tokensIn": 929,
+  "tokensOut": 417
+}

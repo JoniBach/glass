@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[\n  {\n    \"role\": \"task\",\n    \"title\": \"Migrate blog to Astro\",\n    \"body\": \"Working on template conversion\",\n    \"items\": [\n      \"x Audit posts\",\n      \"> Convert templates\",\n      \"Fix image paths\",\n      \"Deploy\"\n    ],\n    \"progress\": 40\n  }\n]\n```",
+  "isError": false,
+  "ms": 9328,
+  "cost": 0.005385,
+  "tokensIn": 915,
+  "tokensOut": 894
+}

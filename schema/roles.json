@@ -1,0 +1,25 @@
+{
+  "_doc": "Glass roles: what each kind of content is for, where it goes and how much of it fits. zone: top-right | upper | center | lower | ticker | bottom | full. priority: higher wins when two roles share a zone. ttl: auto-clear after (60s, 30m, 2h); null = until cleared. hours: only visible in this window (HH:MM-HH:MM, may cross midnight). limits: per field, in words and lines; a line's length comes from the type size (tokens.resolved.json → measure). A role with its own limits allows only the fields it lists; other fields are dropped; a field set to true is passed through as text. ambient: written by provider scripts, not agents, and left out of docs/agent.md. See docs/content.md.",
+  "defaults": {
+    "limits": {
+      "title": { "words": 6, "lines": 1, "measure": "title" },
+      "body":  { "lines": 3, "measure": "body" },
+      "items": { "max": 6, "lines": 1, "measure": "item" },
+      "progress": true
+    }
+  },
+  "roles": {
+    "agenda": { "zone": "upper",  "priority": 1,  "ttl": "18h", "hours": "05:30-12:00", "purpose": "Today's schedule, reminders and plans. Refreshed each morning." },
+    "focus":  { "zone": "upper",  "priority": 2,  "ttl": null,  "purpose": "A standing note the user wants in view (goal, shopping list, countdown)." },
+    "task":   { "zone": "lower",  "priority": 5,  "ttl": "2h",  "purpose": "What Claude is currently doing for the user: title, steps, progress bar." },
+    "info":   { "zone": "lower",  "priority": 4,  "ttl": "30m", "purpose": "An answer or summary the user asked Claude to put on the mirror." },
+    "notify": { "zone": "bottom", "priority": 8,  "ttl": "90s", "purpose": "Short transient message: something finished, a reminder fired.",
+                "limits": { "title": { "words": 8, "lines": 1, "measure": "notice" } } },
+    "alert":  { "zone": "full",   "priority": 10, "ttl": null,  "purpose": "Needs the user's attention now. Covers the mirror. Clear it once acknowledged.",
+                "limits": { "title": { "words": 4, "lines": 2, "measure": "alert" }, "body": { "lines": 2, "measure": "alertBody" } } },
+    "weather": { "zone": "top-right", "priority": 1, "ttl": "2h", "ambient": true, "purpose": "Current weather: the temperature as the title, an icon, conditions and a short forecast.",
+                "limits": { "title": { "words": 2, "lines": 1, "measure": "notice" }, "body": { "lines": 1, "measure": "item" }, "items": { "max": 4, "lines": 1, "measure": "item" } } },
+    "news":    { "zone": "ticker", "priority": 0, "ttl": "1h", "ambient": true, "purpose": "Headlines shown one at a time above the notices; the title is the source.",
+                "limits": { "title": { "words": 4, "lines": 1, "measure": "notice" }, "items": { "max": 10, "lines": 2, "measure": "body" }, "rotate": true } }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "[{\"role\":\"focus\",\"title\":\"Shopping list\",\"items\":[\"milk\",\"eggs\",\"bread\",\"coffee\",\"bin bags\",\"lemons\",\"rice\",\"tinned tomatoes\"]}]",
+  "isError": false,
+  "ms": 9452,
+  "cost": 0.005256,
+  "tokensIn": 891,
+  "tokensOut": 873
+}

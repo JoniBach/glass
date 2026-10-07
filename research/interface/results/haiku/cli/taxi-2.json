@@ -1,0 +1,8 @@
+{
+  "raw": "mirror alert \"Taxi here now\" \"Black Toyota AB12 CDE\"",
+  "isError": false,
+  "ms": 7123,
+  "cost": 0.004214,
+  "tokensIn": 914,
+  "tokensOut": 660
+}

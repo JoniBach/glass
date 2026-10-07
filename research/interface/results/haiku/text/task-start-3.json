@@ -1,0 +1,8 @@
+{
+  "raw": "task: Migrate blog to Astro\nx audit posts\n> convert templates\n- fix image paths\n- deploy\nprogress: 25",
+  "isError": false,
+  "ms": 8343,
+  "cost": 0.004433,
+  "tokensIn": 898,
+  "tokensOut": 707
+}

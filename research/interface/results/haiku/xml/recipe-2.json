@@ -1,0 +1,8 @@
+{
+  "raw": "<focus title=\"Pancake recipe\"><body>Rest 30 mins before cooking. Fry in butter.</body><item>200g flour</item><item>2 eggs</item><item>300ml milk</item><item>Pinch of salt</item><item>Butter for frying</item></focus>",
+  "isError": false,
+  "ms": 22017,
+  "cost": 0.012327000000000001,
+  "tokensIn": 927,
+  "tokensOut": 2280
+}

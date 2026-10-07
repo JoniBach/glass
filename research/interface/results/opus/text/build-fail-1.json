@@ -1,0 +1,8 @@
+{
+  "raw": "info: Build failed, needs a look\nNot urgent. Check it when you have a moment.\n- src/app.ts line 42\n- Cannot find module \"<glass>/render\"\n- 3 warnings",
+  "isError": false,
+  "ms": 5211,
+  "cost": 0.0144,
+  "tokensIn": 1061,
+  "tokensOut": 296
+}

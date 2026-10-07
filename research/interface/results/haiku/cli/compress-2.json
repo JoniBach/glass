@@ -1,0 +1,8 @@
+{
+  "raw": "mirror show info --title \"Mirror Research Findings\" --body \"Key findings for smart mirror design and usability across a room viewing distance.\" --item \"Text: 0.3 degrees minimum for legibility\" --item \"Keep centre clear for reflection\" --item \"Pure black invisible, grey glow\" --item \"Glance under 2 seconds\" --item \"Animate only on change\" --item \"High contrast white text best\"",
+  "isError": false,
+  "ms": 31384,
+  "cost": 0.019108000000000003,
+  "tokensIn": 1018,
+  "tokensOut": 3618
+}

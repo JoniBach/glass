@@ -1,0 +1,8 @@
+{
+  "raw": "<info title=\"3-day forecast\">\n<body>Warming through Saturday.\nThursday rain, then clearing.\nWeekend conditions improving.</body>\n<item>Thu 14° rain</item>\n<item>Fri 17° cloud</item>\n<item>Sat 19° sun</item>\n</info>",
+  "isError": false,
+  "ms": 9843,
+  "cost": 0.005337,
+  "tokensIn": 907,
+  "tokensOut": 886
+}

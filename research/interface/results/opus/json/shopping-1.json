@@ -1,0 +1,8 @@
+{
+  "raw": "[{\"role\":\"focus\",\"title\":\"Shopping: 8 things to buy\",\"items\":[\"Milk\",\"Eggs\",\"Bread\",\"Coffee, rice\",\"Lemons, tinned tomatoes\",\"Bin bags\"]}]",
+  "isError": false,
+  "ms": 4536,
+  "cost": 0.014440000000000001,
+  "tokensIn": 1066,
+  "tokensOut": 296
+}

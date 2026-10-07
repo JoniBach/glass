@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"info\",\"title\":\"Train times\",\"items\":[\"07:42 platform 3\",\"08:05 platform 1\",\"08:31 cancelled\"]}]\n```",
+  "isError": false,
+  "ms": 12096,
+  "cost": 0.0066960000000000006,
+  "tokensIn": 901,
+  "tokensOut": 1159
+}

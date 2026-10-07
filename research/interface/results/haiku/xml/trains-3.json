@@ -1,0 +1,8 @@
+{
+  "raw": "<agenda title=\"Train times: 07:42, 08:05, 08:31\"><body>Three departures this morning, one cancelled</body><item>07:42 from platform 3</item><item>08:05 from platform 1</item><item>08:31 cancelled</item></agenda>",
+  "isError": false,
+  "ms": 20718,
+  "cost": 0.012001,
+  "tokensIn": 916,
+  "tokensOut": 2217
+}

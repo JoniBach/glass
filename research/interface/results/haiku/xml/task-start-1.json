@@ -1,0 +1,8 @@
+{
+  "raw": "<task title=\"Blog to Astro migration\" progress=\"50\"><body>Migrating blog platform. Audit complete. Converting templates now.</body><item>x Audit posts</item><item>&gt; Convert templates</item><item>Fix image paths</item><item>Deploy</item></task>",
+  "isError": false,
+  "ms": 6682,
+  "cost": 0.0040100000000000005,
+  "tokensIn": 930,
+  "tokensOut": 616
+}

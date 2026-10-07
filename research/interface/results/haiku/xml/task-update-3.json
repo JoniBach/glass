@@ -1,0 +1,8 @@
+{
+  "raw": "<task title=\"Book dentist appointment\" progress=\"75\">\n<body>Tue 14:30 selected</body>\n<item>x Found available slots</item>\n<item>x Chose Tue 14:30</item>\n<item>&gt; Confirm by email</item>\n</task>",
+  "isError": false,
+  "ms": 5751,
+  "cost": 0.003198,
+  "tokensIn": 918,
+  "tokensOut": 456
+}

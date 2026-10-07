@@ -1,0 +1,10 @@
+/* Glass layout (principles §7): bands at the top and bottom, the centre kept for the reflection.
+   .gl-frame rows: header, upper, center (reserved, takes the slack), lower, ticker, bottom. */
+.gl-frame { height: 100vh; padding: var(--gl-gutter); display: grid; grid-template-rows: auto auto 1fr auto auto auto; gap: var(--gl-zone-gap); }
+.gl-row { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--gl-gutter); }
+.gl-zone { display: flex; flex-direction: column; gap: var(--gl-stack); }
+.gl-zone--center { justify-content: center; }
+.gl-zone--lower { justify-content: flex-end; }
+.gl-overlay { position: fixed; inset: 0; z-index: 40; background: var(--gl-ground); display: none; justify-content: center; align-items: center; padding: var(--gl-gutter); text-align: center; }
+.gl-overlay.is-on { display: flex; }
+.gl-dim { position: fixed; inset: 0; background: var(--gl-ground); opacity: 0; pointer-events: none; z-index: 50; transition: opacity 4s; }

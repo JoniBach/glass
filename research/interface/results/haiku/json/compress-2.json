@@ -1,0 +1,8 @@
+{
+  "raw": "[{\"role\":\"info\",\"title\":\"Mirror research key findings\",\"body\":\"Research on readable smart mirror design. Text must be legible from viewing distance. Keep centre clear for reflection.\",\"items\":[\"0.3° text angle minimum for legibility\",\"Keep centre clear preserves reflection\",\"Black invisible, large grey glows\",\"Glance time under 2 seconds\",\"Cards work from title alone\",\"Alerts rare, motion on change\"]}]",
+  "isError": false,
+  "ms": 34636,
+  "cost": 0.020177,
+  "tokensIn": 992,
+  "tokensOut": 3837
+}

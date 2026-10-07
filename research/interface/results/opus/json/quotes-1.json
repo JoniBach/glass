@@ -1,0 +1,8 @@
+{
+  "raw": "[{\"role\":\"info\",\"title\":\"Bolt is cheapest at $3,900\",\"body\":\"Bolt saves $600 over Acme but takes 9 weeks. Crux is fastest at 4 weeks for $1,300 more.\",\"items\":[\"Bolt $3,900 - 9 weeks\",\"Acme $4,500 - 6 weeks\",\"Crux $5,200 - 4 weeks\"]}]",
+  "isError": false,
+  "ms": 3862,
+  "cost": 0.012532000000000001,
+  "tokensIn": 1095,
+  "tokensOut": 189
+}

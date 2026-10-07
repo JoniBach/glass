@@ -1,0 +1,8 @@
+{
+  "raw": "mirror show info --title \"Build failed line 42 render module\" --body \"Cannot find <glass>/render module. 3 warnings to review.\" --item \"src/app.ts line 42\" --item \"Missing module <glass>/render\" --item \"3 build warnings found\"",
+  "isError": false,
+  "ms": 21144,
+  "cost": 0.01195,
+  "tokensIn": 935,
+  "tokensOut": 2203
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "<agenda title=\"Today's plan\"><body>Your schedule this morning</body><item>09:30 standup</item><item>11:00 dentist with Dr O'Neil</item><item>13:00 lunch with Priya</item><item>16:00 Q3 review with finance</item></agenda>",
+  "isError": false,
+  "ms": 21028,
+  "cost": 0.011912,
+  "tokensIn": 932,
+  "tokensOut": 2196
+}

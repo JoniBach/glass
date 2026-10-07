@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"info\",\"title\":\"Cheapest: Bolt $3,900\",\"body\":\"Bolt saves $600 vs Acme, $1,300 vs Crux. Trades 9 weeks vs Crux's 4 fastest weeks.\",\"items\":[\"Acme $4,500, 6 weeks\",\"Bolt $3,900, 9 weeks\",\"Crux $5,200, 4 weeks\"]}]\n```",
+  "isError": false,
+  "ms": 7625,
+  "cost": 0.00417,
+  "tokensIn": 920,
+  "tokensOut": 650
+}

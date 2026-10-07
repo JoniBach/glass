@@ -1,0 +1,8 @@
+{
+  "raw": "```bash\nmirror show info --title \"Bolt $3,900 is cheapest\" --body \"Bolt: $3,900, 9 weeks. Acme: $4,500, 6 weeks. Crux: $5,200, 4 weeks\" --item \"$3,900 Bolt 9 weeks\" --item \"$4,500 Acme 6 weeks\" --item \"$5,200 Crux 4 weeks\"\n```",
+  "isError": false,
+  "ms": 16717,
+  "cost": 0.009546,
+  "tokensIn": 946,
+  "tokensOut": 1720
+}

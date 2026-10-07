@@ -1,0 +1,8 @@
+{
+  "raw": "mirror show info --title \"Builder quotes\" --body \"Bolt is cheapest. Crux is fastest. Choose by budget or deadline.\" --item \"Bolt $3,900 9 weeks\" --item \"Acme $4,500 6 weeks\" --item \"Crux $5,200 4 weeks\"",
+  "isError": false,
+  "ms": 9025,
+  "cost": 0.006170999999999999,
+  "tokensIn": 946,
+  "tokensOut": 1045
+}

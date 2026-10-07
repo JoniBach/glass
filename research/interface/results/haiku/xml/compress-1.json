@@ -1,0 +1,8 @@
+{
+  "raw": "<info title=\"Mirror research findings\"><body>Key research findings for smart mirror displays readable from across a room. Design principles for effective presentation.</body><item>0.3° text subtend minimum for legibility</item><item>Keep glass centre clear for reflection</item><item>High contrast white text works best</item><item>One glance should take under 2 seconds</item><item>Animate only on change, motion draws eye</item><item>Alerts should be rare to stay effective</item></info>",
+  "isError": false,
+  "ms": 61549,
+  "cost": 0.033111999999999996,
+  "tokensIn": 1007,
+  "tokensOut": 6421
+}

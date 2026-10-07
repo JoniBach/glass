@@ -1,0 +1,8 @@
+{
+  "raw": "[{\"role\":\"info\",\"title\":\"Mirror research findings\",\"body\":\"Cards work from title alone. Alerts rare to stay effective.\",\"items\":[\"Text subtends 0.3° minimum\",\"Keep glass centre clear\",\"Pure black invisible, grey glows\",\"2 second glance maximum\",\"High contrast white text works best\",\"Animate only on content changes\"]}]",
+  "isError": false,
+  "ms": 74897,
+  "cost": 0.041692,
+  "tokensIn": 992,
+  "tokensOut": 8140
+}

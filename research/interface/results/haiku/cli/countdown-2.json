@@ -1,0 +1,8 @@
+{
+  "raw": "mirror show focus --title \"12 days until Grand Tour launch\" --body \"Launches October 19, 2026\"",
+  "isError": false,
+  "ms": 11278,
+  "cost": 0.006312,
+  "tokensIn": 912,
+  "tokensOut": 1080
+}

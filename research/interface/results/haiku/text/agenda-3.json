@@ -1,0 +1,8 @@
+{
+  "raw": "agenda: Today's plan\n4 appointments\n- 09:30 Standup\n- 11:00 Dentist with Dr O'Neil\n- 13:00 Lunch with Priya\n- 16:00 Q3 review with finance",
+  "isError": false,
+  "ms": 14369,
+  "cost": 0.00841,
+  "tokensIn": 900,
+  "tokensOut": 1502
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "mirror clear alert",
+  "isError": false,
+  "ms": 2650,
+  "cost": 0.001604,
+  "tokensIn": 904,
+  "tokensOut": 140
+}

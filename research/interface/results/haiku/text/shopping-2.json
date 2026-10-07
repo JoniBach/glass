@@ -1,0 +1,8 @@
+{
+  "raw": "focus: Shopping list\nmilk\neggs\nbread\ncoffee\nbin bags\nlemons\nrice\ntinned tomatoes",
+  "isError": false,
+  "ms": 7926,
+  "cost": 0.004209,
+  "tokensIn": 874,
+  "tokensOut": 667
+}

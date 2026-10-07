@@ -1,0 +1,8 @@
+{
+  "raw": "info: Build failed: module not found\nsrc/app.ts line 42: Cannot find \"<glass>/render\"\nPlus 3 warnings need fixing\n- Line 42 error in src/app.ts\n- Missing \"<glass>/render\" module\n- 3 compiler warnings to fix",
+  "isError": false,
+  "ms": 19490,
+  "cost": 0.010617,
+  "tokensIn": 892,
+  "tokensOut": 1945
+}

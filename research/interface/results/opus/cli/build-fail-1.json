@@ -1,0 +1,8 @@
+{
+  "raw": "```bash\nmirror show info --title \"Build failed: app.ts line 42\" --body 'Cannot find module \"<glass>/render\" in src/app.ts. Not urgent, take a look when you can.' --item \"Error at src/app.ts line 42\" --item \"Missing module <glass>/render\" --item \"3 warnings\"\n```",
+  "isError": false,
+  "ms": 5549,
+  "cost": 0.016076,
+  "tokensIn": 1113,
+  "tokensOut": 359
+}

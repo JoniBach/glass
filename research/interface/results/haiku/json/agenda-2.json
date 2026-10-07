@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"agenda\",\"title\":\"Today's plan\",\"body\":\"Four meetings scheduled\",\"items\":[\"09:30 Standup\",\"11:00 Dentist Dr O'Neil\",\"13:00 Lunch with Priya\",\"16:00 Q3 review with finance\"]}]\n```",
+  "isError": false,
+  "ms": 9864,
+  "cost": 0.0055520000000000005,
+  "tokensIn": 917,
+  "tokensOut": 927
+}

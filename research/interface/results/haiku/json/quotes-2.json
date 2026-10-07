@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"info\",\"title\":\"Builder quotes comparison\",\"body\":\"Bolt is cheapest at $3,900 in 9 weeks\\nCrux is fastest at 4 weeks but costs $5,200\\nAcme $4,500 6 weeks mid-range\",\"items\":[\"Bolt $3,900 9 weeks cheapest\",\"Acme $4,500 6 weeks middle\",\"Crux $5,200 4 weeks fastest\"]}]\n```",
+  "isError": false,
+  "ms": 13407,
+  "cost": 0.008060000000000001,
+  "tokensIn": 920,
+  "tokensOut": 1428
+}

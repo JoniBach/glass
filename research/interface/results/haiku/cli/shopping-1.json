@@ -1,0 +1,8 @@
+{
+  "raw": "mirror show focus --title \"Shopping list\" --item \"milk\" --item \"eggs\" --item \"bread\" --item \"coffee\" --item \"bin bags\" --item \"lemons\" --item \"rice\" --item \"tinned tomatoes\"",
+  "isError": false,
+  "ms": 26858,
+  "cost": 0.014447,
+  "tokensIn": 917,
+  "tokensOut": 2706
+}

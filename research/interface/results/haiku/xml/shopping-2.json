@@ -1,0 +1,8 @@
+{
+  "raw": "<focus title=\"Shopping list\">\n<body>Items needed</body>\n<item>milk</item>\n<item>eggs</item>\n<item>bread</item>\n<item>coffee</item>\n<item>bin bags</item>\n<item>lemons</item>\n</focus>",
+  "isError": false,
+  "ms": 61381,
+  "cost": 0.032476,
+  "tokensIn": 906,
+  "tokensOut": 6314
+}

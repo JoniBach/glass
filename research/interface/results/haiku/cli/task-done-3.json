@@ -1,0 +1,8 @@
+{
+  "raw": "```bash\nmirror clear task\nmirror notify \"Blog migration complete, site is live\"\n```",
+  "isError": false,
+  "ms": 5610,
+  "cost": 0.003319,
+  "tokensIn": 914,
+  "tokensOut": 481
+}

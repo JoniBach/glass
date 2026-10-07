@@ -1,0 +1,8 @@
+{
+  "raw": "mirror clear task\nmirror notify \"Report sent to Sarah's team\"",
+  "isError": false,
+  "ms": 2940,
+  "cost": 0.01024,
+  "tokensIn": 1076,
+  "tokensOut": 82
+}

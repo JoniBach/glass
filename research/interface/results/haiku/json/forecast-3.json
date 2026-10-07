@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"info\",\"title\":\"3-day forecast\",\"body\":\"Rain ending Friday, warming trend into weekend\",\"items\":[\"Thu 14° rain\",\"Fri 17° cloud\",\"Sat 19° sun\"]}]\n```",
+  "isError": false,
+  "ms": 7072,
+  "cost": 0.0039570000000000004,
+  "tokensIn": 892,
+  "tokensOut": 613
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "```\nmirror show info --title \"3-Day Weather Forecast\" --item \"Thu 14° rain\" --item \"Fri 17° cloud\" --item \"Sat 19° sun\"\n```",
+  "isError": false,
+  "ms": 6502,
+  "cost": 0.0038030000000000004,
+  "tokensIn": 918,
+  "tokensOut": 577
+}

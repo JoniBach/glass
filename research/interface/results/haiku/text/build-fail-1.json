@@ -1,0 +1,8 @@
+{
+  "raw": "info: Build failed, 3 warnings\nsrc/app.ts line 42 - Cannot find module <glass>/render",
+  "isError": false,
+  "ms": 26792,
+  "cost": 0.014152,
+  "tokensIn": 892,
+  "tokensOut": 2652
+}

@@ -1,0 +1,8 @@
+{
+  "raw": "[{\"role\":\"alert\",\"title\":\"Taxi outside now\",\"body\":\"Black Toyota AB12 CDE. Your ride is here, leave now\"}]",
+  "isError": false,
+  "ms": 4182,
+  "cost": 0.002388,
+  "tokensIn": 888,
+  "tokensOut": 300
+}

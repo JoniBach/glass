@@ -1,0 +1,8 @@
+{
+  "raw": "```json\n[{\"role\":\"focus\",\"title\":\"12 days: Grand Tour launch\",\"body\":\"Countdown to 19 October 2026\",\"items\":[\"12 days remaining\"]}]\n```",
+  "isError": false,
+  "ms": 9839,
+  "cost": 0.005226,
+  "tokensIn": 886,
+  "tokensOut": 868
+}

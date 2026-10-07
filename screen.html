@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glass</title>
+<link rel="stylesheet" href="glass.css">
+</head>
+<body>
+<div id="dim" class="gl-dim"></div>
+<main id="frame" class="gl-frame">
+  <header class="gl-row">
+    <section class="gl-clock">
+      <div id="time" class="gl-figure gl-figure--display" data-gl-tier="room"></div>
+      <div id="date" class="gl-meta gl-clock__date"></div>
+    </section>
+    <section id="top-right"></section>
+  </header>
+  <section id="upper" class="gl-zone"></section>
+  <section id="center" class="gl-zone gl-zone--center"></section>
+  <section id="lower" class="gl-zone gl-zone--lower"></section>
+  <section id="ticker" class="gl-ticker"></section>
+  <section id="bottom" class="gl-zone"></section>
+</main>
+<section id="full" class="gl-overlay"></section>
+<div id="status" class="gl-status" data-gl-tier="decor" hidden></div>
+<script type="module" src="js/screen.mjs"></script>
+</body>
+</html>

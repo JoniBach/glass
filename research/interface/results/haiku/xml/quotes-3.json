@@ -1,0 +1,8 @@
+{
+  "raw": "<info title=\"Cheapest quote: Bolt $3,900\"><body>Bolt cheapest. Crux fastest. Acme in between. Choose by priority: cost or schedule.</body><item>Bolt $3,900 (9 weeks)</item><item>Acme $4,500 (6 weeks)</item><item>Crux $5,200 (4 weeks)</item></info>",
+  "isError": false,
+  "ms": 11307,
+  "cost": 0.0063950000000000005,
+  "tokensIn": 935,
+  "tokensOut": 1092
+}

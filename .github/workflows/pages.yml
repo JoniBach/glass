@@ -1,0 +1,33 @@
+# Publish Glass (style guide, screen page, docs) to GitHub Pages. Lives in glass/ so it works when Glass is the repo
+# root (the published repo); inside the mirror app's repo GitHub ignores it. The screen is static: content travels in the link
+# fragment (#g=…), which browsers never send to the host, so Pages only ever serves the same files.
+name: Glass to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/test.mjs && node scripts/guide.mjs --check
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deploy
+        uses: actions/deploy-pages@v4

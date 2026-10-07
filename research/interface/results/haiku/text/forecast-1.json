@@ -1,0 +1,8 @@
+{
+  "raw": "info: 3-day forecast\nThu 14° rain\nFri 17° cloud\nSat 19° sun",
+  "isError": false,
+  "ms": 5962,
+  "cost": 0.00324,
+  "tokensIn": 875,
+  "tokensOut": 473
+}
