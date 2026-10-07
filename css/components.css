@@ -76,6 +76,9 @@ body:has(.gl-footnote) .gl-frame { padding-bottom: calc(var(--gl-gutter) / 4 + v
 .gl-readout__item + .gl-readout__item { margin-left: 0.7em; }
 .gl-readout__item .gl-icon { width: 1.1em; height: 1.1em; }
 
-/* an item led by an icon (e.g. tonight's moon in the weather): the icon at text height */
+/* an item led by an icon (e.g. tonight's moon in the weather): the icon at text height; in the weather it's a small
+   note at the read-out's size, read up close */
+.gl-weather__note { font-size: var(--gl-text-label); margin-top: calc(var(--gl-stack) / 8); }
+.gl-weather__note .gl-lead .gl-icon { width: 1.1em; height: 1.1em; } /* the same as the read-out's chips */
 .gl-lead { display: inline-flex; align-items: center; gap: 0.3em; white-space: nowrap; }
 .gl-lead .gl-icon { width: 1.05em; height: 1.05em; }

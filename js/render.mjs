@@ -33,7 +33,8 @@ export const alert = (c) => `<div data-role="alert"><h2 class="gl-alert__title" 
 export const weather = (c) => `<div class="gl-weather" data-role="weather"><div class="gl-weather__now">${c.icon ? icon(c.icon) : ''}`
   + `<div class="gl-figure" data-gl-tier="room">${esc(c.title)}</div></div>`
   + (c.body ? `<div class="gl-meta gl-weather__line">${esc(c.body)}</div>` : '')
-  + (c.items?.length ? `<div class="gl-meta gl-weather__days">${c.items.map((i) => `<div>${leadIcon(i)}</div>`).join('')}</div>` : '') + '</div>';
+  + (c.items?.length ? `<div class="gl-meta gl-weather__days">${c.items.map((i) => (ICONS[String(i).split(' ')[0]]
+    ? `<div class="gl-weather__note" data-gl-tier="decor">${leadIcon(i)}</div>` : `<div>${esc(i)}</div>`)).join('')}</div>` : '') + '</div>';
 
 // An item whose first word names an icon starts with that icon ("moon-wax-cres Tonight: waxing crescent").
 function leadIcon(text) {
