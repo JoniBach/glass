@@ -22,6 +22,7 @@ const SHOTS = [
   { name: 'screen-rest', path: '/screen.html?fixture=rest' },
   { name: 'screen-busy', path: '/screen.html?fixture=busy' },
   { name: 'screen-alert', path: '/screen.html?fixture=alert' },
+  { name: 'screen-chart', path: '/screen.html?fixture=chart' },
   { name: 'styleguide', path: '/', full: true },
 ];
 

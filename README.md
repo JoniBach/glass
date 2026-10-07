@@ -9,7 +9,7 @@ relative to this folder: run the scripts from here (`node scripts/test.mjs`) or 
 
 ```
 index.html              the living style guide (served at /glass/): generated from the tokens and schema
-screen.html             the screen: renders a Glass link (#g=…) or a fixture (?fixture=rest|busy|alert). Static, no requests
+screen.html             the screen: renders a Glass link (#g=…) or a fixture (?fixture=rest|busy|alert|chart). Static, no requests
 glass.css               everything in one import (tokens, base, layout, components)
 css/tokens.css          generated from tokens/tokens.json: never edit by hand
 js/content.mjs          content rules: clean, check and trim role content (server, tests, browser)
@@ -18,6 +18,7 @@ js/state.mjs            screen state and apply(): text in, new state out. Pure, 
 js/link.mjs             a whole screen state in a URL fragment: versioned, compressed, URL-safe
 js/screen.mjs           the screen page's script: decode, render, clock, expiry, ticker
 js/render.mjs           components as escaped markup, zone placement, fit policy, icons
+js/chart.mjs            charts on any card (chart: line | bars, data, labels, series, unit): thin marks, brightness not colour
 schema/roles.json       roles: zone, priority, lifetime, limits per field
 fixtures/               Glass text with sample data and a frozen clock, for checks, snapshots and the style guide
 tests/snapshots/        approved screenshots for scripts/visual.mjs

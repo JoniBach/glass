@@ -1,11 +1,12 @@
 {
-  "_doc": "Glass roles: what each kind of content is for, where it goes and how much of it fits. zone: top-right | upper | center | lower | ticker | bottom | full. priority: higher wins when two roles share a zone. ttl: auto-clear after (60s, 30m, 2h); null = until cleared. hours: only visible in this window (HH:MM-HH:MM, may cross midnight). limits: per field, in words and lines; a line's length comes from the type size (tokens.resolved.json → measure). A role with its own limits allows only the fields it lists; other fields are dropped; a field set to true is passed through as text. ambient: written by provider scripts, not agents, and left out of docs/agent.md. See docs/content.md.",
+  "_doc": "Glass roles: what each kind of content is for, where it goes and how much of it fits. zone: top-right | upper | center | lower | ticker | bottom | footer | full. priority: higher wins when two roles share a zone. ttl: auto-clear after (60s, 30m, 2h); null = until cleared. hours: only visible in this window (HH:MM-HH:MM, may cross midnight). limits: per field, in words and lines; a line's length comes from the type size (tokens.resolved.json → measure). A role with its own limits allows only the fields it lists; other fields are dropped; a field set to true is passed through as text. ambient: written by provider scripts, not agents, and left out of docs/agent.md. See docs/content.md.",
   "defaults": {
     "limits": {
       "title": { "words": 6, "lines": 1, "measure": "title" },
       "body":  { "lines": 3, "measure": "body" },
       "items": { "max": 6, "lines": 1, "measure": "item" },
-      "progress": true
+      "progress": true,
+      "chart": true, "data": true, "labels": true, "series": true, "unit": true
     }
   },
   "roles": {
@@ -20,6 +21,8 @@
     "weather": { "zone": "top-right", "priority": 1, "ttl": "2h", "ambient": true, "purpose": "Current weather: the temperature as the title, an icon, conditions and a short forecast.",
                 "limits": { "title": { "words": 2, "lines": 1, "measure": "notice" }, "body": { "lines": 1, "measure": "item" }, "items": { "max": 4, "lines": 1, "measure": "item" } } },
     "news":    { "zone": "ticker", "priority": 0, "ttl": "1h", "ambient": true, "purpose": "Headlines shown one at a time above the notices; the title is the source.",
-                "limits": { "title": { "words": 4, "lines": 1, "measure": "notice" }, "items": { "max": 10, "lines": 2, "measure": "body" }, "rotate": true } }
+                "limits": { "title": { "words": 4, "lines": 1, "measure": "notice" }, "items": { "max": 10, "lines": 2, "measure": "body" }, "rotate": true } },
+    "system":  { "zone": "footer", "priority": 0, "ttl": "3m", "ambient": true, "purpose": "Device stats in one faint line along the bottom edge, for measuring changes; written by bin/stats.mjs.",
+                "limits": { "title": { "lines": 1, "measure": "body" }, "body": { "lines": 1, "measure": "body" } } }
   }
 }

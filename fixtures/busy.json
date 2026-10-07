@@ -5,5 +5,5 @@
  "display": {
   "clock24h": true
  },
- "text": "weather: 14°\nicon: partly\nPartly cloudy · London\n- 16° / 9° · 20% rain\n- Thu 15° · Fri 18° · Sat 15°\n\nnews: Sample News\n- Thames clipper adds an evening service from Greenwich to Battersea\n- Autumn leaf-fall timetable starts on Southeastern routes\nrotate: 60\n\nagenda: Wednesday plan\n- 09:30 Stand-up\n- 12:00 Lunch with Sam\n- 15:00 Dentist, Harley St\n- Pick up parcel\n\ntask: Booking dentist\nx Found three slots\n> Choosing a time\n- Confirm by email\nprogress: 50\n\ninfo: Train at 07:42\nLondon Bridge\n- 07:42 Platform 3\n- 08:05 Platform 1, 2 min late\n\nnotify: Report sent to the team"
+ "text": "weather: 14°\nicon: partly\nPartly cloudy · London\n- 16° / 9° · 20% rain\n- Thu 15° · Fri 18° · Sat 15°\n\nnews: Sample News\n- Thames clipper adds an evening service from Greenwich to Battersea\n- Autumn leaf-fall timetable starts on Southeastern routes\nrotate: 60\n\nagenda: Wednesday plan\n- 09:30 Stand-up\n- 12:00 Lunch with Sam\n- 15:00 Dentist, Harley St\n- Pick up parcel\n\ntask: Booking dentist\nx Found three slots\n> Choosing a time\n- Confirm by email\nprogress: 50\n\ninfo: Train at 07:42\nLondon Bridge\n- 07:42 Platform 3\n- 08:05 Platform 1, 2 min late\n\nnotify: Report sent to the team\n\nsystem: 15.4 W · CPU 4% · Chrome 3%\n77% charging · 31 °C"
 }

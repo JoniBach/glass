@@ -1,0 +1,9 @@
+{
+ "_doc": "Screen fixture: Glass text applied at a frozen time. Rendered by screen.html?fixture=chart",
+ "now": "2026-10-07T15:00:00+01:00",
+ "tz": "Europe/London",
+ "display": {
+  "clock24h": true
+ },
+ "text": "weather: 14°\nicon: partly\nPartly cloudy · London\n- 16° / 9° · 20% rain\n\ninfo: Mirror power down 2 W\nchart: line\ndata: 16.4 16.1 16.6 15.9 15.4 15.6 15.1 14.8 15.0 14.6 14.2 14.4 | 16.0 16.2 16.1 16.3 16.0 16.2 16.1 16.4 16.2 16.0 16.3 16.1\nlabels: 14:00, 15:00\nseries: Today, Yesterday\nunit: W\n\nfocus: Bolt is cheapest\nchart: bars\ndata: 3900 4500 5200\nlabels: Bolt, Acme, Crux\nunit: £"
+}

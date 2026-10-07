@@ -1,6 +1,8 @@
 // Glass components as markup. Input is role content ({title, body, items, progress}) already checked by content.mjs.
 // Every string is escaped: content often comes from the web or an LLM, and it must stay text (principles §8).
 
+import { chart } from './chart.mjs';
+
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 export function list(items = []) {
@@ -19,7 +21,7 @@ export function card(label, c) {
     + (label ? `<div class="gl-card__label" data-gl-tier="decor">${esc(label)}</div>` : '')
     + (c.title ? `<h2 class="gl-card__title">${esc(c.title)}</h2>` : '')
     + (c.body ? `<p class="gl-card__body">${esc(c.body)}</p>` : '')
-    + list(c.items) + progress(c.progress) + '</div>';
+    + chart(c) + list(c.items) + progress(c.progress) + '</div>';
 }
 
 export const notice = (c) => `<h2 class="gl-notice">${esc(c.title)}</h2>`;
@@ -33,10 +35,13 @@ export const weather = (c) => `<div class="gl-weather" data-role="weather"><div 
   + (c.body ? `<div class="gl-meta gl-weather__line">${esc(c.body)}</div>` : '')
   + (c.items?.length ? `<div class="gl-meta gl-weather__days">${c.items.map((i) => `<div>${esc(i)}</div>`).join('')}</div>` : '') + '</div>';
 
+// Footer: one faint line pinned to the bottom edge (decoration tier), e.g. device stats while measuring.
+export const footnote = (c) => `<div class="gl-footnote" data-gl-tier="decor">${esc([c.title, c.body].filter(Boolean).join(' · '))}</div>`;
+
 export const tickerLine = (it) => `<div class="gl-ticker__src" data-gl-tier="decor">${esc(it.source)}</div><div class="gl-ticker__text">${esc(it.title)}</div>`;
 
 // Group visible layers by zone, highest priority first. Single-layer zones show only the top one; others stack.
-export const SINGLE = ['top-right', 'ticker', 'bottom', 'full'];
+export const SINGLE = ['top-right', 'ticker', 'bottom', 'footer', 'full'];
 export function byZone(layers) {
   const zones = {};
   for (const [role, l] of Object.entries(layers)) (zones[l.zone] ||= []).push([role, l]);
@@ -50,6 +55,7 @@ export function byZone(layers) {
 // The ticker rotates, so the page renders it one item at a time with tickerLine; this shows the first.
 export function renderZone(zone, entries = []) {
   if (zone === 'top-right') return entries.map(([, l]) => weather(l)).join('');
+  if (zone === 'footer') return entries.map(([, l]) => footnote(l)).join('');
   if (zone === 'ticker') return entries.map(([, l]) => (l.items?.length ? tickerLine({ source: l.title, title: l.items[0] }) : '')).join('');
   if (zone === 'full') return entries.map(([, l]) => alert(l)).join('');
   if (zone === 'bottom') return entries.map(([, l]) => notice(l)).join('');
@@ -57,9 +63,15 @@ export function renderZone(zone, entries = []) {
 }
 
 // §7: nothing clips. Ambient elements are hidden, in order, until the frame fits.
+// Overflow is measured against the frame's inner (padding) edge: grid rows can spill into the padding without
+// changing scrollHeight, which would put the bottom row into the gutter or under a footnote.
 export function fit(frame, yieldOrder = []) {
+  const fits = () => {
+    const limit = frame.getBoundingClientRect().bottom - parseFloat(getComputedStyle(frame).paddingBottom) + 0.5;
+    return frame.scrollHeight <= frame.clientHeight && [...frame.children].every((c) => c.hidden || c.getBoundingClientRect().bottom <= limit);
+  };
   for (const el of yieldOrder) el.hidden = false;
-  for (const el of yieldOrder) { if (frame.scrollHeight <= frame.clientHeight) break; el.hidden = true; }
+  for (const el of yieldOrder) { if (fits()) break; el.hidden = true; }
 }
 
 // Line icons, 24×24, stroke only (no fills, §1).

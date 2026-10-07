@@ -20,7 +20,8 @@ export function build(schema = read('schema/roles.json'), measure = read('tokens
     return `${name} ${chars(l)} chars`;
   };
   const describe = (l, fields) => [...['title', 'body', 'items'].filter((f) => l[f]), ...fields].map((f) => limit(f, l[f])).join(' · ');
-  const extras = (role) => fieldsFor(schema, role).filter((f) => !META.includes(f));
+  const CHART = ['chart', 'data', 'labels', 'series', 'unit']; // explained in their own paragraph
+  const extras = (role) => fieldsFor(schema, role).filter((f) => !META.includes(f) && !CHART.includes(f));
   const roleNames = Object.keys(schema.roles).filter((r) => !schema.roles[r].ambient);
   const ambient = Object.keys(schema.roles).filter((r) => schema.roles[r].ambient);
   const cardRoles = roleNames.filter((role) => !schema.roles[role].limits); // roles on the default limits
@@ -43,8 +44,11 @@ Write updates as plain-text blocks. A block starts with \`role: title\`; the lin
 | role | for | fields |
 |---|---|---|
 ${rows.join('\n')}
-${card ? `\nCard fields: ${card}.\n` : ''}${ambient.length ? `\n${ambient.join(' and ')} ${ambient.length > 1 ? 'are' : 'is'} kept up by provider scripts: don't write ${ambient.length > 1 ? 'them' : 'it'}.\n` : ''}
-Writing:
+${card ? `\nCard fields: ${card}.\n` : ''}${ambient.length ? `\n${ambient.length > 1 ? `${ambient.slice(0, -1).join(', ')} and ${ambient.at(-1)}` : ambient[0]} ${ambient.length > 1 ? 'are' : 'is'} kept up by provider scripts: don't write ${ambient.length > 1 ? 'them' : 'it'}.\n` : ''}
+${fieldsFor(schema, cardRoles[0] || '').includes('chart') ? `Charts on a card: \`chart: line\` (trend) or \`chart: bars\` (≤ 7 to compare), \`data: 3 5 4 8\` (a second,
+context series after \`|\`), optional \`labels: Mon, Tue\`, \`series: Name, Other\`, \`unit: W\`. The title still says the point.
+
+` : ''}Writing:
 - The title is the message, because most glances read only the title: "Train at 07:42", not "Train times".
 - Put figures first. One fact per item, no full stops. Plain text only, no markdown or emoji.
 - Text over a limit is cut at a word boundary.

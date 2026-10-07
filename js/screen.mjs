@@ -6,7 +6,7 @@ import { decode, tokenOf } from './link.mjs';
 import { byZone, renderZone, tickerLine, fit } from './render.mjs';
 
 const $ = (id) => document.getElementById(id);
-const ZONES = ['top-right', 'upper', 'center', 'lower', 'bottom', 'full'];
+const ZONES = ['top-right', 'upper', 'center', 'lower', 'bottom', 'footer', 'full'];
 let state = null, frozen = null, problem = '';
 const now = () => frozen ?? Date.now();
 

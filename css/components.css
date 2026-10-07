@@ -45,3 +45,25 @@
 
 /* clock (top-left): drawn by the screen itself, from the state's time zone */
 .gl-clock__date { margin-top: calc(var(--gl-stack) / 4); }
+
+/* footnote (footer zone): one faint line on the bottom edge, below the notices; decoration only */
+.gl-footnote { position: fixed; left: var(--gl-gutter); right: var(--gl-gutter); bottom: calc(var(--gl-gutter) / 4); font-size: var(--gl-text-label); color: var(--gl-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; }
+/* while a footnote shows, the frame keeps its bottom edge clear for it, so it never sits under a notice */
+body:has(.gl-footnote) .gl-frame { padding-bottom: calc(var(--gl-gutter) / 4 + var(--gl-text-label) * 2); }
+
+/* chart (in a card): thin marks in ink, labels as text; no gridlines, no fills behind the plot (§1, §2) */
+.gl-chart { margin-top: calc(var(--gl-stack) / 3); }
+.gl-chart__now { font-size: var(--gl-text-title); font-weight: var(--gl-weight-title); color: var(--gl-ink-1); line-height: var(--gl-line); }
+.gl-chart__plot { display: block; width: 100%; height: calc(var(--gl-text-body) * 4); overflow: visible; }
+.gl-chart__mark { fill: none; stroke: var(--gl-ink-1); stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.gl-chart__mark--context { stroke: var(--gl-ink-3); }
+.gl-chart__dot { stroke-width: 10px; }
+.gl-chart__base { fill: none; stroke: var(--gl-rule); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.gl-chart__axis { display: flex; justify-content: space-between; gap: var(--gl-gutter); margin-top: calc(var(--gl-stack) / 6); font-size: var(--gl-text-meta); color: var(--gl-ink-2); font-variant-numeric: tabular-nums; }
+.gl-chart__legend { display: flex; gap: var(--gl-gutter); font-size: var(--gl-text-meta); color: var(--gl-ink-2); margin-top: calc(var(--gl-stack) / 6); }
+.gl-chart__key { width: calc(var(--gl-text-meta) * 0.8); height: 4px; margin-right: calc(var(--gl-text-meta) * 0.3); vertical-align: middle; overflow: visible; }
+.gl-bar { display: grid; grid-template-columns: minmax(0, 30%) 1fr auto; align-items: center; gap: calc(var(--gl-gutter) / 3); font-size: var(--gl-text-body); line-height: var(--gl-line); }
+.gl-bar__label { color: var(--gl-ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gl-bar__track { width: 100%; height: 16px; overflow: visible; }
+.gl-chart__bar { fill: var(--gl-ink-2); }
+.gl-bar__value { color: var(--gl-ink-1); font-variant-numeric: tabular-nums; }

@@ -22,6 +22,7 @@ const SCENARIOS = [
   { name: 'rest', path: '/screen.html?fixture=rest', litMax: B.litAreaRest, centre: true },
   { name: 'busy', path: '/screen.html?fixture=busy', litMax: B.litAreaBusy, centre: false },
   { name: 'alert', path: '/screen.html?fixture=alert', litMax: B.litAreaBusy, centre: false },
+  { name: 'chart', path: '/screen.html?fixture=chart', litMax: B.litAreaBusy, centre: false },
   ...(opt('live') ? [{ name: 'live', url: opt('live'), litMax: B.litAreaBusy, centre: false }] : []),
 ].filter((s) => !opt('only') || opt('only').split(',').includes(s.name));
 if (!opt('live')) console.log('(no --live link given: checking the fixtures only)');
@@ -94,6 +95,10 @@ function judge(sc, page, shot) {
   // §7 fit: nothing cut off at the edge of the glass
   const cut = page.text.filter((t) => t.bottom > H || t.right > W);
   rule('§7 fit', !cut.length, cut.length ? `cut off: ${cut.map((t) => `${t.sel} "${t.text}"`).join('; ')}` : 'everything fits on the glass');
+  // §7 margin: readable text stays inside the gutter (only decoration, e.g. a footnote, may sit in it)
+  const GUTTER = parseFloat(tokens.space.gutter);
+  const inMargin = page.text.filter((t) => t.tier !== 'decor' && t.bottom > H - GUTTER + 1);
+  rule('§7 margin', !inMargin.length, inMargin.length ? `in the bottom margin: ${inMargin.map((t) => `${t.sel} "${t.text}" bottom ${t.bottom}px`).join('; ')}` : 'readable text stays inside the gutter');
   // §7 centre clear at rest
   if (sc.centre) rule('§7 centre', shot.centre <= B.centreLitMax, `${(shot.centre * 100).toFixed(2)}% of the centre band lit (max ${B.centreLitMax * 100}%)`);
   return { fail, pass };

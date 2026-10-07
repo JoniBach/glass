@@ -7,6 +7,7 @@ import { parse, stringify } from '../js/text.mjs';
 import { build as buildGuide } from './guide.mjs';
 import { apply, empty, visible, prune } from '../js/state.mjs';
 import { encode, decode, tokenOf, linkTo } from '../js/link.mjs';
+import { spec, downsample, format, chart } from '../js/chart.mjs';
 
 const dir = new URL('..', import.meta.url).pathname;
 const schema = JSON.parse(fs.readFileSync(dir + 'schema/roles.json', 'utf8'));
@@ -96,4 +97,16 @@ assert.deepEqual(await decode(token), linked); n++; console.log('  ✓ link: rou
 assert.match(token, /^1\.[A-Za-z0-9_-]+$/); n++; console.log(`  ✓ link: versioned and URL-safe (${token.length} chars)`);
 await assert.rejects(decode('2.abc'), /newer/); n++; console.log('  ✓ link: refuses a newer version');
 assert.equal(await linkTo('https://x/screen.html#g=old', linked), `https://x/screen.html#g=${token}`); n++; console.log('  ✓ link: linkTo replaces an old fragment');
+// Charts (chart.mjs)
+t('chart: Glass text carries a chart through apply()', () => {
+  const l = apply(schema, measure, s0, 'info: Power use falling\nchart: line\ndata: 16.1 15.4 15.0 14.2\nlabels: 14:00, 15:00\nunit: W', T0).state.layers.info;
+  assert.deepEqual(spec(l), { kind: 'line', series: [{ name: '', values: [16.1, 15.4, 15, 14.2] }], labels: ['14:00', '15:00'], unit: 'W' });
+});
+t('chart: two series max, gaps kept as null', () => assert.deepEqual(spec({ chart: 'line', data: '1 - 3 | 4 5 6 | 7' }).series.map((s) => s.values), [[1, null, 3], [4, 5, 6]]));
+t('chart: thousands commas stay inside a value', () => assert.deepEqual(spec({ chart: 'bars', data: '4,500 3,900, 5,200' }).series[0].values, [4500, 3900, 5200]));
+t('chart: bars', () => assert.equal(spec({ chart: 'bars', data: '4500 3900' }).kind, 'bars'));
+t('chart: no data, no chart', () => { assert.equal(chart({ chart: 'line' }), ''); assert.equal(chart({ chart: 'line', data: 'x y' }), ''); });
+t('chart: long series keep their shape in 120 points', () => { const d = downsample(Array.from({ length: 1000 }, (_, i) => i)); assert.equal(d.length, 120); assert.ok(d[0] < d[119]); });
+t('chart: compact numbers and units', () => assert.deepEqual([format(1284), format(12900), format(4.2e6, '$'), format(-3.5, '%'), format(15.4, 'W')], ['1,284', '12.9K', '$4.2M', '-3.5%', '15.4 W']));
+t('chart: labels are escaped text', () => assert.ok(!chart({ chart: 'bars', data: '1', labels: '<b>x</b>' }).includes('<b>')));
 console.log(`${n} passed`);
